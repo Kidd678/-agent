@@ -11,6 +11,7 @@ from app.services.memory.session_store import SessionStore
 class RouteResult:
     response: str
     tools_used: list[str]
+    debug: dict | None = None
 
 
 class Router:
@@ -33,19 +34,14 @@ class Router:
         history: list[dict[str, str]] | None = None,
     ) -> RouteResult:
         label = intent.label
+        print(f"\n[DEBUG] Router.dispatch: intent={label}, raw='{intent.raw_output}'")
 
-        if label == "tool_call":
+        if label in ("tool_call", "system_op", "web_search", "navigation"):
             return await cls._handle_tool_call(query, history)
         elif label == "knowledge_qa":
             return await cls._handle_knowledge_qa(query, history)
         elif label == "chitchat":
             return await cls._handle_chitchat(query)
-        elif label == "system_op":
-            return await cls._handle_tool_call(query, history)
-        elif label == "web_search":
-            return await cls._handle_tool_call(query, history)
-        elif label == "navigation":
-            return await cls._handle_tool_call(query, history)
         else:
             return await cls._handle_chitchat(query)
 
@@ -54,30 +50,36 @@ class Router:
         cls, query: str, history: list[dict[str, str]] | None
     ) -> RouteResult:
         from app.services.retrieval.pipeline import RetrievalPipeline
-        tools = await RetrievalPipeline.retrieve(query, top_k=5)
+        tools, retrieval_debug = await RetrievalPipeline.retrieve(query, top_k=5)
         from app.services.agent.mcp_executor import MCPExecutor
         executor = cls._get_executor()
         result = await executor.run(query=query, tools=tools, history=history)
-        return RouteResult(response=result["response"], tools_used=result["tools_used"])
+        # 合并 retrieval 调试数据和 executor 调试数据
+        debug = {**retrieval_debug, **result.get("debug", {})}
+        return RouteResult(response=result["response"], tools_used=result["tools_used"], debug=debug)
 
     @classmethod
     async def _handle_knowledge_qa(
         cls, query: str, history: list[dict[str, str]] | None
     ) -> RouteResult:
+        import httpx
         from openai import AsyncOpenAI
         from app.config import LLM_API_KEY, LLM_BASE_URL, LLM_MODEL
 
-        client = AsyncOpenAI(api_key=LLM_API_KEY, base_url=LLM_BASE_URL)
+        http_client = httpx.AsyncClient(trust_env=False)
+        client = AsyncOpenAI(api_key=LLM_API_KEY, base_url=LLM_BASE_URL, http_client=http_client)
         messages = (history or []) + [{"role": "user", "content": query}]
         resp = await client.chat.completions.create(model=LLM_MODEL, messages=messages)
         return RouteResult(response=resp.choices[0].message.content or "", tools_used=[])
 
     @classmethod
     async def _handle_chitchat(cls, query: str) -> RouteResult:
+        import httpx
         from openai import AsyncOpenAI
         from app.config import LLM_API_KEY, LLM_BASE_URL, LLM_MODEL
 
-        client = AsyncOpenAI(api_key=LLM_API_KEY, base_url=LLM_BASE_URL)
+        http_client = httpx.AsyncClient(trust_env=False)
+        client = AsyncOpenAI(api_key=LLM_API_KEY, base_url=LLM_BASE_URL, http_client=http_client)
         resp = await client.chat.completions.create(
             model=LLM_MODEL,
             messages=[

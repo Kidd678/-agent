@@ -2,6 +2,7 @@ import asyncio
 import json
 from typing import Any
 
+import httpx
 from openai import AsyncOpenAI
 
 from app.config import LLM_API_KEY, LLM_BASE_URL, LLM_MODEL
@@ -40,7 +41,14 @@ class MCPExecutor:
     """MCP Tool Call 执行器：LLM 决策 → 并发执行工具 → 聚合结果。"""
 
     def __init__(self, client: AsyncOpenAI | None = None):
-        self.client = client or AsyncOpenAI(api_key=LLM_API_KEY, base_url=LLM_BASE_URL)
+        if client:
+            self.client = client
+        else:
+            # trust_env=False 避免系统代理拦截 MiMo API 请求
+            http_client = httpx.AsyncClient(trust_env=False)
+            self.client = AsyncOpenAI(
+                api_key=LLM_API_KEY, base_url=LLM_BASE_URL, http_client=http_client
+            )
         self.model = LLM_MODEL
 
     async def run(self, query: str, tools: list[dict], history: list[dict] | None = None) -> dict:
@@ -51,10 +59,13 @@ class MCPExecutor:
             history: 历史对话
 
         Returns:
-            {"response": str, "tools_used": list[str]}
+            {"response": str, "tools_used": list[str], "debug": dict}
         """
         history = history or []
         openai_tools = ToolRegistry.to_openai_tools(tools)
+
+        debug_calls = []
+        debug_results = []
 
         # 第一次调用：让 LLM 决定用哪些工具
         response = await self.client.chat.completions.create(
@@ -67,13 +78,31 @@ class MCPExecutor:
         message = response.choices[0].message
 
         if not message.tool_calls:
-            return {"response": message.content or "", "tools_used": []}
+            return {
+                "response": message.content or "",
+                "tools_used": [],
+                "debug": {"llm_tool_calls": [], "tool_results": [], "llm_final_response": message.content or ""},
+            }
+
+        # 记录 LLM 的工具调用决策
+        for tc in message.tool_calls:
+            debug_calls.append({
+                "tool": tc.function.name,
+                "arguments": tc.function.arguments,
+            })
 
         # 并发执行所有工具调用
         tool_results = await asyncio.gather(*[
             self._execute_tool(tc.function.name, tc.function.arguments)
             for tc in message.tool_calls
         ])
+
+        # 记录工具执行结果
+        for tc, result in zip(message.tool_calls, tool_results):
+            debug_results.append({
+                "tool": tc.function.name,
+                "result": str(result),
+            })
 
         # 将工具结果追加到 messages
         tool_messages = [
@@ -95,9 +124,16 @@ class MCPExecutor:
             ],
         )
 
+        final_text = final_response.choices[0].message.content or ""
+
         return {
-            "response": final_response.choices[0].message.content or "",
+            "response": final_text,
             "tools_used": [tc.function.name for tc in message.tool_calls],
+            "debug": {
+                "llm_tool_calls": debug_calls,
+                "tool_results": debug_results,
+                "llm_final_response": final_text,
+            },
         }
 
     async def _execute_tool(self, tool_name: str, arguments: str) -> Any:
