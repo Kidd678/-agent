@@ -1,0 +1,2264 @@
+[
+  {
+    "query": "提醒我晚上8点吃药",
+    "positive_tool_ids": [
+      "reminder_set"
+    ],
+    "hard_negative_tool_ids": [
+      "calendar_create",
+      "calendar_query",
+      "calendar_delete"
+    ]
+  },
+  {
+    "query": "帮我查一下热映电影",
+    "positive_tool_ids": [
+      "web_movie"
+    ],
+    "hard_negative_tool_ids": [
+      "web_recipe",
+      "web_encyclopedia",
+      "web_music",
+      "web_translate"
+    ]
+  },
+  {
+    "query": "翻译'你好'成日语",
+    "positive_tool_ids": [
+      "web_translate"
+    ],
+    "hard_negative_tool_ids": [
+      "web_music",
+      "web_encyclopedia",
+      "web_movie",
+      "web_recipe"
+    ]
+  },
+  {
+    "query": "查一下从北京飞深圳的航班",
+    "positive_tool_ids": [
+      "navigation_flight"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_train",
+      "navigation_subway",
+      "navigation_bus"
+    ]
+  },
+  {
+    "query": "导航去机场",
+    "positive_tool_ids": [
+      "navigation_start"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_route",
+      "navigation_eta"
+    ]
+  },
+  {
+    "query": "帮我把屏幕旋转关了",
+    "positive_tool_ids": [
+      "system_rotation"
+    ],
+    "hard_negative_tool_ids": [
+      "system_camera",
+      "system_nfc",
+      "system_wifi",
+      "system_screenshot"
+    ]
+  },
+  {
+    "query": "水的沸点是多少度",
+    "positive_tool_ids": [
+      "web_encyclopedia"
+    ],
+    "hard_negative_tool_ids": [
+      "web_recipe",
+      "web_translate",
+      "web_music",
+      "web_movie"
+    ]
+  },
+  {
+    "query": "帮我搜一下附近的酒店",
+    "positive_tool_ids": [
+      "web_search"
+    ],
+    "hard_negative_tool_ids": [
+      "web_news",
+      "web_exchange",
+      "web_stock"
+    ]
+  },
+  {
+    "query": "翻译这句话成英文",
+    "positive_tool_ids": [
+      "web_translate"
+    ],
+    "hard_negative_tool_ids": [
+      "web_search",
+      "web_encyclopedia"
+    ]
+  },
+  {
+    "query": "发条短信给老板请假",
+    "positive_tool_ids": [
+      "sms_send"
+    ],
+    "hard_negative_tool_ids": [
+      "sms_read",
+      "contact_add",
+      "contact_query",
+      "phone_call_log"
+    ]
+  },
+  {
+    "query": "查一下比亚迪股价",
+    "positive_tool_ids": [
+      "web_stock"
+    ],
+    "hard_negative_tool_ids": [
+      "web_news",
+      "web_exchange",
+      "web_search"
+    ]
+  },
+  {
+    "query": "帮我看看广州明天会不会下雨",
+    "positive_tool_ids": [
+      "weather_query"
+    ],
+    "hard_negative_tool_ids": [
+      "weather_alert",
+      "weather_forecast"
+    ]
+  },
+  {
+    "query": "搜索一下Taylor Swift的歌",
+    "positive_tool_ids": [
+      "web_music"
+    ],
+    "hard_negative_tool_ids": [
+      "web_translate",
+      "web_encyclopedia",
+      "web_recipe",
+      "web_movie"
+    ]
+  },
+  {
+    "query": "把NFC关掉",
+    "positive_tool_ids": [
+      "system_nfc"
+    ],
+    "hard_negative_tool_ids": [
+      "system_rotation",
+      "system_brightness",
+      "system_volume",
+      "system_camera"
+    ]
+  },
+  {
+    "query": "帮我把媒体音量调小",
+    "positive_tool_ids": [
+      "system_volume"
+    ],
+    "hard_negative_tool_ids": [
+      "system_camera",
+      "system_wifi",
+      "system_screenshot",
+      "system_flashlight"
+    ]
+  },
+  {
+    "query": "帮我看看A股今天怎么样",
+    "positive_tool_ids": [
+      "web_stock"
+    ],
+    "hard_negative_tool_ids": [
+      "web_news",
+      "web_exchange",
+      "web_search"
+    ]
+  },
+  {
+    "query": "帮我计时30秒",
+    "positive_tool_ids": [
+      "timer_set"
+    ],
+    "hard_negative_tool_ids": [
+      "alarm_set",
+      "alarm_list",
+      "time_query",
+      "alarm_delete"
+    ]
+  },
+  {
+    "query": "查看通话历史",
+    "positive_tool_ids": [
+      "phone_call_log"
+    ],
+    "hard_negative_tool_ids": [
+      "contact_query",
+      "phone_call",
+      "sms_send",
+      "sms_read"
+    ]
+  },
+  {
+    "query": "音量调到最大",
+    "positive_tool_ids": [
+      "system_volume"
+    ],
+    "hard_negative_tool_ids": [
+      "system_camera",
+      "system_wifi",
+      "system_screenshot",
+      "system_flashlight"
+    ]
+  },
+  {
+    "query": "帮我解释一下相对论",
+    "positive_tool_ids": [
+      "web_encyclopedia"
+    ],
+    "hard_negative_tool_ids": [
+      "web_recipe",
+      "web_translate",
+      "web_music",
+      "web_movie"
+    ]
+  },
+  {
+    "query": "帮我找一下王五的电话",
+    "positive_tool_ids": [
+      "contact_query"
+    ],
+    "hard_negative_tool_ids": [
+      "phone_call_log",
+      "contact_add",
+      "sms_send",
+      "sms_read"
+    ]
+  },
+  {
+    "query": "我要拍照",
+    "positive_tool_ids": [
+      "system_camera"
+    ],
+    "hard_negative_tool_ids": [
+      "system_screenshot",
+      "system_volume",
+      "system_dnd",
+      "system_nfc"
+    ]
+  },
+  {
+    "query": "设置一个生日提醒",
+    "positive_tool_ids": [
+      "reminder_set"
+    ],
+    "hard_negative_tool_ids": [
+      "calendar_create",
+      "calendar_query",
+      "calendar_delete"
+    ]
+  },
+  {
+    "query": "设个闹钟半小时后响",
+    "positive_tool_ids": [
+      "alarm_set"
+    ],
+    "hard_negative_tool_ids": [
+      "timer_set",
+      "alarm_delete",
+      "alarm_list",
+      "time_query"
+    ]
+  },
+  {
+    "query": "帮我看看有没有恶劣天气预警",
+    "positive_tool_ids": [
+      "weather_alert"
+    ],
+    "hard_negative_tool_ids": [
+      "weather_query",
+      "weather_forecast"
+    ]
+  },
+  {
+    "query": "截个屏",
+    "positive_tool_ids": [
+      "system_screenshot"
+    ],
+    "hard_negative_tool_ids": [
+      "system_camera",
+      "system_flashlight"
+    ]
+  },
+  {
+    "query": "查一下昨天的来电",
+    "positive_tool_ids": [
+      "phone_call_log"
+    ],
+    "hard_negative_tool_ids": [
+      "contact_query",
+      "phone_call",
+      "sms_send",
+      "sms_read"
+    ]
+  },
+  {
+    "query": "今天有天气预警吗",
+    "positive_tool_ids": [
+      "weather_alert"
+    ],
+    "hard_negative_tool_ids": [
+      "weather_query",
+      "weather_forecast"
+    ]
+  },
+  {
+    "query": "帮我看看怎么去那个地方",
+    "positive_tool_ids": [
+      "navigation_route"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_parking",
+      "navigation_weather_road",
+      "navigation_nearby",
+      "navigation_eta"
+    ]
+  },
+  {
+    "query": "取消所有闹钟",
+    "positive_tool_ids": [
+      "alarm_delete"
+    ],
+    "hard_negative_tool_ids": [
+      "timer_set",
+      "alarm_set",
+      "time_query",
+      "alarm_list"
+    ]
+  },
+  {
+    "query": "把这句话翻译成英文",
+    "positive_tool_ids": [
+      "web_translate"
+    ],
+    "hard_negative_tool_ids": [
+      "web_music",
+      "web_encyclopedia",
+      "web_movie",
+      "web_recipe"
+    ]
+  },
+  {
+    "query": "帮我打电话给张三",
+    "positive_tool_ids": [
+      "phone_call"
+    ],
+    "hard_negative_tool_ids": [
+      "contact_query",
+      "sms_send"
+    ]
+  },
+  {
+    "query": "珠穆朗玛峰有多高",
+    "positive_tool_ids": [
+      "web_encyclopedia"
+    ],
+    "hard_negative_tool_ids": [
+      "web_recipe",
+      "web_translate",
+      "web_music",
+      "web_movie"
+    ]
+  },
+  {
+    "query": "看看今天收到的短信",
+    "positive_tool_ids": [
+      "sms_read"
+    ],
+    "hard_negative_tool_ids": [
+      "contact_add",
+      "sms_send",
+      "contact_query",
+      "phone_call_log"
+    ]
+  },
+  {
+    "query": "关闭闪光灯",
+    "positive_tool_ids": [
+      "system_flashlight"
+    ],
+    "hard_negative_tool_ids": [
+      "system_brightness",
+      "system_bluetooth",
+      "system_volume",
+      "system_nfc"
+    ]
+  },
+  {
+    "query": "300路公交什么时候到",
+    "positive_tool_ids": [
+      "navigation_bus"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_train",
+      "navigation_subway",
+      "navigation_flight"
+    ]
+  },
+  {
+    "query": "帮我翻译一下这段话",
+    "positive_tool_ids": [
+      "web_translate"
+    ],
+    "hard_negative_tool_ids": [
+      "web_music",
+      "web_encyclopedia",
+      "web_movie",
+      "web_recipe"
+    ]
+  },
+  {
+    "query": "把周五的会议删了",
+    "positive_tool_ids": [
+      "calendar_delete"
+    ],
+    "hard_negative_tool_ids": [
+      "calendar_create",
+      "calendar_query",
+      "reminder_set"
+    ]
+  },
+  {
+    "query": "从西直门到国贸怎么换乘",
+    "positive_tool_ids": [
+      "navigation_subway"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_bus",
+      "navigation_flight",
+      "navigation_train"
+    ]
+  },
+  {
+    "query": "关闭无线网络",
+    "positive_tool_ids": [
+      "system_wifi"
+    ],
+    "hard_negative_tool_ids": [
+      "system_brightness",
+      "system_rotation",
+      "system_dnd",
+      "system_flashlight"
+    ]
+  },
+  {
+    "query": "发短信给妈妈说我晚点到",
+    "positive_tool_ids": [
+      "sms_send"
+    ],
+    "hard_negative_tool_ids": [
+      "phone_call",
+      "reminder_set"
+    ]
+  },
+  {
+    "query": "纽约现在几点",
+    "positive_tool_ids": [
+      "time_query"
+    ],
+    "hard_negative_tool_ids": [
+      "alarm_list",
+      "timer_set",
+      "alarm_delete",
+      "alarm_set"
+    ]
+  },
+  {
+    "query": "附近有加油站吗",
+    "positive_tool_ids": [
+      "navigation_nearby"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_parking",
+      "navigation_route"
+    ]
+  },
+  {
+    "query": "明天早上叫我起来",
+    "positive_tool_ids": [
+      "alarm_set"
+    ],
+    "hard_negative_tool_ids": [
+      "timer_set",
+      "alarm_delete",
+      "alarm_list",
+      "time_query"
+    ]
+  },
+  {
+    "query": "成都这周天气怎么样",
+    "positive_tool_ids": [
+      "weather_forecast"
+    ],
+    "hard_negative_tool_ids": [
+      "weather_alert",
+      "weather_query"
+    ]
+  },
+  {
+    "query": "设置10分钟倒计时",
+    "positive_tool_ids": [
+      "timer_set"
+    ],
+    "hard_negative_tool_ids": [
+      "alarm_set",
+      "alarm_list",
+      "time_query",
+      "alarm_delete"
+    ]
+  },
+  {
+    "query": "找一下李四的联系方式",
+    "positive_tool_ids": [
+      "contact_query"
+    ],
+    "hard_negative_tool_ids": [
+      "phone_call_log",
+      "contact_add",
+      "sms_send",
+      "sms_read"
+    ]
+  },
+  {
+    "query": "张三的手机号是多少",
+    "positive_tool_ids": [
+      "contact_query"
+    ],
+    "hard_negative_tool_ids": [
+      "phone_call_log",
+      "contact_add",
+      "sms_send",
+      "sms_read"
+    ]
+  },
+  {
+    "query": "把wifi关了",
+    "positive_tool_ids": [
+      "system_wifi"
+    ],
+    "hard_negative_tool_ids": [
+      "system_brightness",
+      "system_rotation",
+      "system_dnd",
+      "system_flashlight"
+    ]
+  },
+  {
+    "query": "查看所有闹钟",
+    "positive_tool_ids": [
+      "alarm_list"
+    ],
+    "hard_negative_tool_ids": [
+      "calendar_query",
+      "reminder_set"
+    ]
+  },
+  {
+    "query": "关闭NFC",
+    "positive_tool_ids": [
+      "system_nfc"
+    ],
+    "hard_negative_tool_ids": [
+      "system_rotation",
+      "system_brightness",
+      "system_volume",
+      "system_camera"
+    ]
+  },
+  {
+    "query": "帮我看看今天的汇率",
+    "positive_tool_ids": [
+      "web_exchange"
+    ],
+    "hard_negative_tool_ids": [
+      "web_news",
+      "web_search",
+      "web_stock"
+    ]
+  },
+  {
+    "query": "帮我规划路线",
+    "positive_tool_ids": [
+      "navigation_route"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_start",
+      "navigation_eta"
+    ]
+  },
+  {
+    "query": "帮我查个号码",
+    "positive_tool_ids": [
+      "contact_query"
+    ],
+    "hard_negative_tool_ids": [
+      "phone_call_log",
+      "contact_add",
+      "sms_send",
+      "sms_read"
+    ]
+  },
+  {
+    "query": "流浪地球评分多少",
+    "positive_tool_ids": [
+      "web_movie"
+    ],
+    "hard_negative_tool_ids": [
+      "web_recipe",
+      "web_encyclopedia",
+      "web_music",
+      "web_translate"
+    ]
+  },
+  {
+    "query": "NFC功能开了吗",
+    "positive_tool_ids": [
+      "system_nfc"
+    ],
+    "hard_negative_tool_ids": [
+      "system_rotation",
+      "system_brightness",
+      "system_volume",
+      "system_camera"
+    ]
+  },
+  {
+    "query": "来一首轻音乐",
+    "positive_tool_ids": [
+      "web_music"
+    ],
+    "hard_negative_tool_ids": [
+      "web_translate",
+      "web_encyclopedia",
+      "web_recipe",
+      "web_movie"
+    ]
+  },
+  {
+    "query": "看看最近的通话记录",
+    "positive_tool_ids": [
+      "phone_call_log"
+    ],
+    "hard_negative_tool_ids": [
+      "contact_query",
+      "phone_call",
+      "sms_send",
+      "sms_read"
+    ]
+  },
+  {
+    "query": "连一下WiFi",
+    "positive_tool_ids": [
+      "system_wifi"
+    ],
+    "hard_negative_tool_ids": [
+      "system_brightness",
+      "system_rotation",
+      "system_dnd",
+      "system_flashlight"
+    ]
+  },
+  {
+    "query": "附近有停车场吗",
+    "positive_tool_ids": [
+      "navigation_parking"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_nearby",
+      "navigation_route"
+    ]
+  },
+  {
+    "query": "查看明天的日程",
+    "positive_tool_ids": [
+      "calendar_query"
+    ],
+    "hard_negative_tool_ids": [
+      "reminder_set",
+      "calendar_create",
+      "calendar_delete"
+    ]
+  },
+  {
+    "query": "取消下午的会议",
+    "positive_tool_ids": [
+      "calendar_delete"
+    ],
+    "hard_negative_tool_ids": [
+      "calendar_create",
+      "calendar_query",
+      "reminder_set"
+    ]
+  },
+  {
+    "query": "找一下附近的餐厅",
+    "positive_tool_ids": [
+      "navigation_nearby"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_parking",
+      "navigation_route",
+      "navigation_eta",
+      "navigation_start"
+    ]
+  },
+  {
+    "query": "帮我放一首歌",
+    "positive_tool_ids": [
+      "web_music"
+    ],
+    "hard_negative_tool_ids": [
+      "web_translate",
+      "web_encyclopedia",
+      "web_recipe",
+      "web_movie"
+    ]
+  },
+  {
+    "query": "明天去上海的高铁",
+    "positive_tool_ids": [
+      "navigation_train"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_flight",
+      "navigation_route"
+    ]
+  },
+  {
+    "query": "查看未来7天天气",
+    "positive_tool_ids": [
+      "weather_forecast"
+    ],
+    "hard_negative_tool_ids": [
+      "weather_alert",
+      "weather_query"
+    ]
+  },
+  {
+    "query": "今天有去上海的航班吗",
+    "positive_tool_ids": [
+      "navigation_flight"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_train",
+      "navigation_subway",
+      "navigation_bus"
+    ]
+  },
+  {
+    "query": "100欧元换多少日元",
+    "positive_tool_ids": [
+      "web_exchange"
+    ],
+    "hard_negative_tool_ids": [
+      "web_news",
+      "web_search",
+      "web_stock"
+    ]
+  },
+  {
+    "query": "三环堵车吗",
+    "positive_tool_ids": [
+      "navigation_weather_road"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_nearby",
+      "navigation_eta",
+      "navigation_start",
+      "navigation_route"
+    ]
+  },
+  {
+    "query": "我设置了哪些闹钟",
+    "positive_tool_ids": [
+      "alarm_list"
+    ],
+    "hard_negative_tool_ids": [
+      "timer_set",
+      "alarm_delete",
+      "alarm_set",
+      "time_query"
+    ]
+  },
+  {
+    "query": "连一下蓝牙",
+    "positive_tool_ids": [
+      "system_bluetooth"
+    ],
+    "hard_negative_tool_ids": [
+      "system_brightness",
+      "system_rotation",
+      "system_wifi",
+      "system_dnd"
+    ]
+  },
+  {
+    "query": "现在几点了",
+    "positive_tool_ids": [
+      "time_query"
+    ],
+    "hard_negative_tool_ids": [
+      "alarm_list",
+      "calendar_query"
+    ]
+  },
+  {
+    "query": "屏幕太暗了帮我调亮一点",
+    "positive_tool_ids": [
+      "system_brightness"
+    ],
+    "hard_negative_tool_ids": [
+      "system_screenshot",
+      "system_dnd",
+      "system_wifi",
+      "system_rotation"
+    ]
+  },
+  {
+    "query": "可乐鸡翅怎么做",
+    "positive_tool_ids": [
+      "web_recipe"
+    ],
+    "hard_negative_tool_ids": [
+      "web_encyclopedia",
+      "web_movie",
+      "web_music",
+      "web_translate"
+    ]
+  },
+  {
+    "query": "查一下美元汇率",
+    "positive_tool_ids": [
+      "web_exchange"
+    ],
+    "hard_negative_tool_ids": [
+      "web_stock",
+      "web_search"
+    ]
+  },
+  {
+    "query": "添加新联系人",
+    "positive_tool_ids": [
+      "contact_add"
+    ],
+    "hard_negative_tool_ids": [
+      "phone_call_log",
+      "contact_query",
+      "sms_send",
+      "sms_read"
+    ]
+  },
+  {
+    "query": "茅台股价多少",
+    "positive_tool_ids": [
+      "web_stock"
+    ],
+    "hard_negative_tool_ids": [
+      "web_exchange",
+      "web_news"
+    ]
+  },
+  {
+    "query": "帮我取消明天的安排",
+    "positive_tool_ids": [
+      "calendar_delete"
+    ],
+    "hard_negative_tool_ids": [
+      "calendar_create",
+      "calendar_query",
+      "reminder_set"
+    ]
+  },
+  {
+    "query": "查一下明天北京天气",
+    "positive_tool_ids": [
+      "weather_query"
+    ],
+    "hard_negative_tool_ids": [
+      "weather_forecast",
+      "web_search"
+    ]
+  },
+  {
+    "query": "帮我看看坐地铁怎么去",
+    "positive_tool_ids": [
+      "navigation_subway"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_bus",
+      "navigation_flight",
+      "navigation_train"
+    ]
+  },
+  {
+    "query": "查一下茅台股价",
+    "positive_tool_ids": [
+      "web_stock"
+    ],
+    "hard_negative_tool_ids": [
+      "web_news",
+      "web_exchange",
+      "web_search"
+    ]
+  },
+  {
+    "query": "帮我发短信说明天不去",
+    "positive_tool_ids": [
+      "sms_send"
+    ],
+    "hard_negative_tool_ids": [
+      "sms_read",
+      "contact_add",
+      "contact_query",
+      "phone_call_log"
+    ]
+  },
+  {
+    "query": "规划一下去上海的路线",
+    "positive_tool_ids": [
+      "navigation_route"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_parking",
+      "navigation_weather_road",
+      "navigation_nearby",
+      "navigation_eta"
+    ]
+  },
+  {
+    "query": "给张三发短信说我到了",
+    "positive_tool_ids": [
+      "sms_send"
+    ],
+    "hard_negative_tool_ids": [
+      "sms_read",
+      "contact_add",
+      "contact_query",
+      "phone_call_log"
+    ]
+  },
+  {
+    "query": "把这段中文翻成法语",
+    "positive_tool_ids": [
+      "web_translate"
+    ],
+    "hard_negative_tool_ids": [
+      "web_music",
+      "web_encyclopedia",
+      "web_movie",
+      "web_recipe"
+    ]
+  },
+  {
+    "query": "查看一下我的日历",
+    "positive_tool_ids": [
+      "calendar_query"
+    ],
+    "hard_negative_tool_ids": [
+      "reminder_set",
+      "calendar_create",
+      "calendar_delete"
+    ]
+  },
+  {
+    "query": "查一下公交到站时间",
+    "positive_tool_ids": [
+      "navigation_bus"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_subway",
+      "navigation_eta"
+    ]
+  },
+  {
+    "query": "到公司要多久",
+    "positive_tool_ids": [
+      "navigation_eta"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_route",
+      "navigation_start"
+    ]
+  },
+  {
+    "query": "调高亮度",
+    "positive_tool_ids": [
+      "system_brightness"
+    ],
+    "hard_negative_tool_ids": [
+      "system_screenshot",
+      "system_dnd",
+      "system_wifi",
+      "system_rotation"
+    ]
+  },
+  {
+    "query": "帮我删掉那个下午3点的闹钟",
+    "positive_tool_ids": [
+      "alarm_delete"
+    ],
+    "hard_negative_tool_ids": [
+      "timer_set",
+      "alarm_set",
+      "time_query",
+      "alarm_list"
+    ]
+  },
+  {
+    "query": "安排周五下午的会议",
+    "positive_tool_ids": [
+      "calendar_create"
+    ],
+    "hard_negative_tool_ids": [
+      "calendar_query",
+      "reminder_set",
+      "calendar_delete"
+    ]
+  },
+  {
+    "query": "闹钟列表",
+    "positive_tool_ids": [
+      "alarm_list"
+    ],
+    "hard_negative_tool_ids": [
+      "timer_set",
+      "alarm_delete",
+      "alarm_set",
+      "time_query"
+    ]
+  },
+  {
+    "query": "删除明天的日程",
+    "positive_tool_ids": [
+      "calendar_delete"
+    ],
+    "hard_negative_tool_ids": [
+      "alarm_delete",
+      "reminder_set"
+    ]
+  },
+  {
+    "query": "到机场要多久",
+    "positive_tool_ids": [
+      "navigation_eta"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_nearby",
+      "navigation_route",
+      "navigation_start",
+      "navigation_parking"
+    ]
+  },
+  {
+    "query": "今天有什么日程",
+    "positive_tool_ids": [
+      "calendar_query"
+    ],
+    "hard_negative_tool_ids": [
+      "reminder_set",
+      "alarm_list"
+    ]
+  },
+  {
+    "query": "查一下附近公交站",
+    "positive_tool_ids": [
+      "navigation_bus"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_train",
+      "navigation_subway",
+      "navigation_flight"
+    ]
+  },
+  {
+    "query": "播放轻音乐",
+    "positive_tool_ids": [
+      "web_music"
+    ],
+    "hard_negative_tool_ids": [
+      "web_search",
+      "web_movie"
+    ]
+  },
+  {
+    "query": "有没有高温预警",
+    "positive_tool_ids": [
+      "weather_alert"
+    ],
+    "hard_negative_tool_ids": [
+      "weather_query",
+      "weather_forecast"
+    ]
+  },
+  {
+    "query": "帮我存一下这个号码",
+    "positive_tool_ids": [
+      "contact_add"
+    ],
+    "hard_negative_tool_ids": [
+      "contact_query",
+      "phone_call"
+    ]
+  },
+  {
+    "query": "这周有什么会议",
+    "positive_tool_ids": [
+      "calendar_query"
+    ],
+    "hard_negative_tool_ids": [
+      "reminder_set",
+      "calendar_create",
+      "calendar_delete"
+    ]
+  },
+  {
+    "query": "截个图",
+    "positive_tool_ids": [
+      "system_screenshot"
+    ],
+    "hard_negative_tool_ids": [
+      "system_bluetooth",
+      "system_rotation",
+      "system_brightness",
+      "system_flashlight"
+    ]
+  },
+  {
+    "query": "帮我设置明天早上8点的闹钟",
+    "positive_tool_ids": [
+      "alarm_set"
+    ],
+    "hard_negative_tool_ids": [
+      "calendar_create",
+      "reminder_set"
+    ]
+  },
+  {
+    "query": "开一下闪光灯",
+    "positive_tool_ids": [
+      "system_flashlight"
+    ],
+    "hard_negative_tool_ids": [
+      "system_brightness",
+      "system_bluetooth",
+      "system_volume",
+      "system_nfc"
+    ]
+  },
+  {
+    "query": "开启自动亮度",
+    "positive_tool_ids": [
+      "system_brightness"
+    ],
+    "hard_negative_tool_ids": [
+      "system_screenshot",
+      "system_dnd",
+      "system_wifi",
+      "system_rotation"
+    ]
+  },
+  {
+    "query": "帮我查一下明天的限号",
+    "positive_tool_ids": [
+      "web_search"
+    ],
+    "hard_negative_tool_ids": [
+      "web_news",
+      "web_exchange",
+      "web_stock"
+    ]
+  },
+  {
+    "query": "调低音量",
+    "positive_tool_ids": [
+      "system_volume"
+    ],
+    "hard_negative_tool_ids": [
+      "system_brightness",
+      "system_dnd"
+    ]
+  },
+  {
+    "query": "打电话给老板",
+    "positive_tool_ids": [
+      "phone_call"
+    ],
+    "hard_negative_tool_ids": [
+      "contact_add",
+      "sms_read",
+      "contact_query",
+      "sms_send"
+    ]
+  },
+  {
+    "query": "查一下CA1234航班",
+    "positive_tool_ids": [
+      "navigation_flight"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_train",
+      "navigation_subway",
+      "navigation_bus"
+    ]
+  },
+  {
+    "query": "帮我看看闹钟",
+    "positive_tool_ids": [
+      "alarm_list"
+    ],
+    "hard_negative_tool_ids": [
+      "timer_set",
+      "alarm_delete",
+      "alarm_set",
+      "time_query"
+    ]
+  },
+  {
+    "query": "帮我创建一个会议日程",
+    "positive_tool_ids": [
+      "calendar_create"
+    ],
+    "hard_negative_tool_ids": [
+      "calendar_query",
+      "reminder_set",
+      "calendar_delete"
+    ]
+  },
+  {
+    "query": "今天的天气预警",
+    "positive_tool_ids": [
+      "weather_alert"
+    ],
+    "hard_negative_tool_ids": [
+      "weather_query",
+      "weather_forecast"
+    ]
+  },
+  {
+    "query": "帮我开勿扰",
+    "positive_tool_ids": [
+      "system_dnd"
+    ],
+    "hard_negative_tool_ids": [
+      "system_bluetooth",
+      "system_flashlight",
+      "system_nfc",
+      "system_brightness"
+    ]
+  },
+  {
+    "query": "附近哪里可以停车",
+    "positive_tool_ids": [
+      "navigation_parking"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_route",
+      "navigation_start",
+      "navigation_weather_road",
+      "navigation_nearby"
+    ]
+  },
+  {
+    "query": "拨打13800138000",
+    "positive_tool_ids": [
+      "phone_call"
+    ],
+    "hard_negative_tool_ids": [
+      "contact_add",
+      "sms_read",
+      "contact_query",
+      "sms_send"
+    ]
+  },
+  {
+    "query": "从公司到机场怎么走",
+    "positive_tool_ids": [
+      "navigation_route"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_parking",
+      "navigation_weather_road",
+      "navigation_nearby",
+      "navigation_eta"
+    ]
+  },
+  {
+    "query": "帮我看看长安街堵不堵",
+    "positive_tool_ids": [
+      "navigation_weather_road"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_nearby",
+      "navigation_eta",
+      "navigation_start",
+      "navigation_route"
+    ]
+  },
+  {
+    "query": "新建一个联系人",
+    "positive_tool_ids": [
+      "contact_add"
+    ],
+    "hard_negative_tool_ids": [
+      "phone_call_log",
+      "contact_query",
+      "sms_send",
+      "sms_read"
+    ]
+  },
+  {
+    "query": "查看科技新闻",
+    "positive_tool_ids": [
+      "web_news"
+    ],
+    "hard_negative_tool_ids": [
+      "web_stock",
+      "web_exchange",
+      "web_search"
+    ]
+  },
+  {
+    "query": "苹果股票多少钱",
+    "positive_tool_ids": [
+      "web_stock"
+    ],
+    "hard_negative_tool_ids": [
+      "web_news",
+      "web_exchange",
+      "web_search"
+    ]
+  },
+  {
+    "query": "帮我设个提醒买菜",
+    "positive_tool_ids": [
+      "reminder_set"
+    ],
+    "hard_negative_tool_ids": [
+      "calendar_create",
+      "calendar_query",
+      "calendar_delete"
+    ]
+  },
+  {
+    "query": "设一个下午3点的闹钟",
+    "positive_tool_ids": [
+      "alarm_set"
+    ],
+    "hard_negative_tool_ids": [
+      "timer_set",
+      "alarm_delete",
+      "alarm_list",
+      "time_query"
+    ]
+  },
+  {
+    "query": "打开相机拍照",
+    "positive_tool_ids": [
+      "system_camera"
+    ],
+    "hard_negative_tool_ids": [
+      "system_screenshot",
+      "system_flashlight"
+    ]
+  },
+  {
+    "query": "录个视频",
+    "positive_tool_ids": [
+      "system_camera"
+    ],
+    "hard_negative_tool_ids": [
+      "system_screenshot",
+      "system_volume",
+      "system_dnd",
+      "system_nfc"
+    ]
+  },
+  {
+    "query": "把亮度调到50%",
+    "positive_tool_ids": [
+      "system_brightness"
+    ],
+    "hard_negative_tool_ids": [
+      "system_screenshot",
+      "system_dnd",
+      "system_wifi",
+      "system_rotation"
+    ]
+  },
+  {
+    "query": "把明天早上的闹钟删了",
+    "positive_tool_ids": [
+      "alarm_delete"
+    ],
+    "hard_negative_tool_ids": [
+      "timer_set",
+      "alarm_set",
+      "time_query",
+      "alarm_list"
+    ]
+  },
+  {
+    "query": "关闭自动旋转",
+    "positive_tool_ids": [
+      "system_rotation"
+    ],
+    "hard_negative_tool_ids": [
+      "system_brightness",
+      "system_dnd"
+    ]
+  },
+  {
+    "query": "把音量关了",
+    "positive_tool_ids": [
+      "system_volume"
+    ],
+    "hard_negative_tool_ids": [
+      "system_camera",
+      "system_wifi",
+      "system_screenshot",
+      "system_flashlight"
+    ]
+  },
+  {
+    "query": "北京到广州的火车票",
+    "positive_tool_ids": [
+      "navigation_train"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_flight",
+      "navigation_bus",
+      "navigation_subway"
+    ]
+  },
+  {
+    "query": "体育新闻",
+    "positive_tool_ids": [
+      "web_news"
+    ],
+    "hard_negative_tool_ids": [
+      "web_stock",
+      "web_exchange",
+      "web_search"
+    ]
+  },
+  {
+    "query": "有什么国际新闻",
+    "positive_tool_ids": [
+      "web_news"
+    ],
+    "hard_negative_tool_ids": [
+      "web_stock",
+      "web_exchange",
+      "web_search"
+    ]
+  },
+  {
+    "query": "搜一下怎么做红烧肉",
+    "positive_tool_ids": [
+      "web_search"
+    ],
+    "hard_negative_tool_ids": [
+      "web_news",
+      "web_exchange",
+      "web_stock"
+    ]
+  },
+  {
+    "query": "今天有什么新闻",
+    "positive_tool_ids": [
+      "web_news"
+    ],
+    "hard_negative_tool_ids": [
+      "web_search",
+      "web_stock"
+    ]
+  },
+  {
+    "query": "播放一些放松的音乐",
+    "positive_tool_ids": [
+      "web_music"
+    ],
+    "hard_negative_tool_ids": [
+      "web_translate",
+      "web_encyclopedia",
+      "web_recipe",
+      "web_movie"
+    ]
+  },
+  {
+    "query": "开启自动旋转",
+    "positive_tool_ids": [
+      "system_rotation"
+    ],
+    "hard_negative_tool_ids": [
+      "system_camera",
+      "system_nfc",
+      "system_wifi",
+      "system_screenshot"
+    ]
+  },
+  {
+    "query": "查看最近短信",
+    "positive_tool_ids": [
+      "sms_read"
+    ],
+    "hard_negative_tool_ids": [
+      "contact_add",
+      "sms_send",
+      "contact_query",
+      "phone_call_log"
+    ]
+  },
+  {
+    "query": "查看未读短信",
+    "positive_tool_ids": [
+      "sms_read"
+    ],
+    "hard_negative_tool_ids": [
+      "contact_add",
+      "sms_send",
+      "contact_query",
+      "phone_call_log"
+    ]
+  },
+  {
+    "query": "现在出发去公司几点能到",
+    "positive_tool_ids": [
+      "navigation_eta"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_nearby",
+      "navigation_route",
+      "navigation_start",
+      "navigation_parking"
+    ]
+  },
+  {
+    "query": "查一下明天去上海的高铁",
+    "positive_tool_ids": [
+      "navigation_train"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_flight",
+      "navigation_bus",
+      "navigation_subway"
+    ]
+  },
+  {
+    "query": "帮我开手电筒",
+    "positive_tool_ids": [
+      "system_flashlight"
+    ],
+    "hard_negative_tool_ids": [
+      "system_brightness",
+      "system_bluetooth",
+      "system_volume",
+      "system_nfc"
+    ]
+  },
+  {
+    "query": "找一下商场的停车场",
+    "positive_tool_ids": [
+      "navigation_parking"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_route",
+      "navigation_start",
+      "navigation_weather_road",
+      "navigation_nearby"
+    ]
+  },
+  {
+    "query": "明天早上提醒我带伞",
+    "positive_tool_ids": [
+      "reminder_set"
+    ],
+    "hard_negative_tool_ids": [
+      "calendar_create",
+      "calendar_query",
+      "calendar_delete"
+    ]
+  },
+  {
+    "query": "帮我找找附近的咖啡店",
+    "positive_tool_ids": [
+      "navigation_nearby"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_parking",
+      "navigation_route",
+      "navigation_eta",
+      "navigation_start"
+    ]
+  },
+  {
+    "query": "帮我截图",
+    "positive_tool_ids": [
+      "system_screenshot"
+    ],
+    "hard_negative_tool_ids": [
+      "system_bluetooth",
+      "system_rotation",
+      "system_brightness",
+      "system_flashlight"
+    ]
+  },
+  {
+    "query": "光速是多少",
+    "positive_tool_ids": [
+      "web_encyclopedia"
+    ],
+    "hard_negative_tool_ids": [
+      "web_recipe",
+      "web_translate",
+      "web_music",
+      "web_movie"
+    ]
+  },
+  {
+    "query": "查看台风预警",
+    "positive_tool_ids": [
+      "weather_alert"
+    ],
+    "hard_negative_tool_ids": [
+      "weather_query",
+      "weather_forecast"
+    ]
+  },
+  {
+    "query": "开启勿扰模式",
+    "positive_tool_ids": [
+      "system_dnd"
+    ],
+    "hard_negative_tool_ids": [
+      "system_volume",
+      "system_brightness"
+    ]
+  },
+  {
+    "query": "开启免打扰一小时",
+    "positive_tool_ids": [
+      "system_dnd"
+    ],
+    "hard_negative_tool_ids": [
+      "system_bluetooth",
+      "system_flashlight",
+      "system_nfc",
+      "system_brightness"
+    ]
+  },
+  {
+    "query": "查一下航班信息",
+    "positive_tool_ids": [
+      "navigation_flight"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_train",
+      "navigation_route"
+    ]
+  },
+  {
+    "query": "截一下当前屏幕",
+    "positive_tool_ids": [
+      "system_screenshot"
+    ],
+    "hard_negative_tool_ids": [
+      "system_bluetooth",
+      "system_rotation",
+      "system_brightness",
+      "system_flashlight"
+    ]
+  },
+  {
+    "query": "帮我看看今天的安排",
+    "positive_tool_ids": [
+      "calendar_query"
+    ],
+    "hard_negative_tool_ids": [
+      "reminder_set",
+      "calendar_create",
+      "calendar_delete"
+    ]
+  },
+  {
+    "query": "有没有张三发的短信",
+    "positive_tool_ids": [
+      "sms_read"
+    ],
+    "hard_negative_tool_ids": [
+      "contact_add",
+      "sms_send",
+      "contact_query",
+      "phone_call_log"
+    ]
+  },
+  {
+    "query": "把勿扰关了",
+    "positive_tool_ids": [
+      "system_dnd"
+    ],
+    "hard_negative_tool_ids": [
+      "system_bluetooth",
+      "system_flashlight",
+      "system_nfc",
+      "system_brightness"
+    ]
+  },
+  {
+    "query": "把手电筒关了",
+    "positive_tool_ids": [
+      "system_flashlight"
+    ],
+    "hard_negative_tool_ids": [
+      "system_brightness",
+      "system_bluetooth",
+      "system_volume",
+      "system_nfc"
+    ]
+  },
+  {
+    "query": "最近的停车场在哪",
+    "positive_tool_ids": [
+      "navigation_nearby"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_parking",
+      "navigation_route",
+      "navigation_eta",
+      "navigation_start"
+    ]
+  },
+  {
+    "query": "查查成都今天的温度",
+    "positive_tool_ids": [
+      "weather_query"
+    ],
+    "hard_negative_tool_ids": [
+      "weather_alert",
+      "weather_forecast"
+    ]
+  },
+  {
+    "query": "查一下今天的股票",
+    "positive_tool_ids": [
+      "web_stock"
+    ],
+    "hard_negative_tool_ids": [
+      "web_exchange",
+      "web_news"
+    ]
+  },
+  {
+    "query": "帮我看看今天的热点新闻",
+    "positive_tool_ids": [
+      "web_news"
+    ],
+    "hard_negative_tool_ids": [
+      "web_stock",
+      "web_exchange",
+      "web_search"
+    ]
+  },
+  {
+    "query": "明天有什么日程",
+    "positive_tool_ids": [
+      "calendar_query"
+    ],
+    "hard_negative_tool_ids": [
+      "reminder_set",
+      "calendar_create",
+      "calendar_delete"
+    ]
+  },
+  {
+    "query": "看看我现在有几个闹钟",
+    "positive_tool_ids": [
+      "alarm_list"
+    ],
+    "hard_negative_tool_ids": [
+      "timer_set",
+      "alarm_delete",
+      "alarm_set",
+      "time_query"
+    ]
+  },
+  {
+    "query": "有没有简单的家常菜推荐",
+    "positive_tool_ids": [
+      "web_recipe"
+    ],
+    "hard_negative_tool_ids": [
+      "web_encyclopedia",
+      "web_movie",
+      "web_music",
+      "web_translate"
+    ]
+  },
+  {
+    "query": "把亮度调低一点",
+    "positive_tool_ids": [
+      "system_brightness"
+    ],
+    "hard_negative_tool_ids": [
+      "system_screenshot",
+      "system_dnd",
+      "system_wifi",
+      "system_rotation"
+    ]
+  },
+  {
+    "query": "把屏幕亮度调高",
+    "positive_tool_ids": [
+      "system_brightness"
+    ],
+    "hard_negative_tool_ids": [
+      "system_volume",
+      "system_dnd"
+    ]
+  },
+  {
+    "query": "计时5分钟",
+    "positive_tool_ids": [
+      "timer_set"
+    ],
+    "hard_negative_tool_ids": [
+      "alarm_set",
+      "alarm_list",
+      "time_query",
+      "alarm_delete"
+    ]
+  },
+  {
+    "query": "日元兑人民币多少",
+    "positive_tool_ids": [
+      "web_exchange"
+    ],
+    "hard_negative_tool_ids": [
+      "web_news",
+      "web_search",
+      "web_stock"
+    ]
+  },
+  {
+    "query": "导航去公司",
+    "positive_tool_ids": [
+      "navigation_start"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_weather_road",
+      "navigation_route",
+      "navigation_nearby",
+      "navigation_parking"
+    ]
+  },
+  {
+    "query": "去机场那条路堵车吗",
+    "positive_tool_ids": [
+      "navigation_weather_road"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_nearby",
+      "navigation_eta",
+      "navigation_start",
+      "navigation_route"
+    ]
+  },
+  {
+    "query": "每天早上6点半叫我起床",
+    "positive_tool_ids": [
+      "alarm_set"
+    ],
+    "hard_negative_tool_ids": [
+      "timer_set",
+      "alarm_delete",
+      "alarm_list",
+      "time_query"
+    ]
+  },
+  {
+    "query": "蓝牙开了吗",
+    "positive_tool_ids": [
+      "system_bluetooth"
+    ],
+    "hard_negative_tool_ids": [
+      "system_brightness",
+      "system_rotation",
+      "system_wifi",
+      "system_dnd"
+    ]
+  },
+  {
+    "query": "今天谁给我打过电话",
+    "positive_tool_ids": [
+      "phone_call_log"
+    ],
+    "hard_negative_tool_ids": [
+      "contact_query",
+      "phone_call",
+      "sms_send",
+      "sms_read"
+    ]
+  },
+  {
+    "query": "地球到月球有多远",
+    "positive_tool_ids": [
+      "web_encyclopedia"
+    ],
+    "hard_negative_tool_ids": [
+      "web_recipe",
+      "web_translate",
+      "web_music",
+      "web_movie"
+    ]
+  },
+  {
+    "query": "今天有暴雨预警吗",
+    "positive_tool_ids": [
+      "weather_alert"
+    ],
+    "hard_negative_tool_ids": [
+      "weather_query",
+      "weather_forecast"
+    ]
+  },
+  {
+    "query": "保存13800138000为张三",
+    "positive_tool_ids": [
+      "contact_add"
+    ],
+    "hard_negative_tool_ids": [
+      "phone_call_log",
+      "contact_query",
+      "sms_send",
+      "sms_read"
+    ]
+  },
+  {
+    "query": "打开NFC",
+    "positive_tool_ids": [
+      "system_nfc"
+    ],
+    "hard_negative_tool_ids": [
+      "system_bluetooth",
+      "system_wifi"
+    ]
+  },
+  {
+    "query": "打开蓝牙",
+    "positive_tool_ids": [
+      "system_bluetooth"
+    ],
+    "hard_negative_tool_ids": [
+      "system_brightness",
+      "system_rotation",
+      "system_wifi",
+      "system_dnd"
+    ]
+  },
+  {
+    "query": "帮我算一下到那儿要多久",
+    "positive_tool_ids": [
+      "navigation_eta"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_nearby",
+      "navigation_route",
+      "navigation_start",
+      "navigation_parking"
+    ]
+  },
+  {
+    "query": "打开手电筒",
+    "positive_tool_ids": [
+      "system_flashlight"
+    ],
+    "hard_negative_tool_ids": [
+      "system_camera",
+      "system_brightness"
+    ]
+  },
+  {
+    "query": "下一班公交还有多久",
+    "positive_tool_ids": [
+      "navigation_bus"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_train",
+      "navigation_subway",
+      "navigation_flight"
+    ]
+  },
+  {
+    "query": "帮我看看明天的航班",
+    "positive_tool_ids": [
+      "navigation_flight"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_train",
+      "navigation_subway",
+      "navigation_bus"
+    ]
+  },
+  {
+    "query": "设个7点的闹钟",
+    "positive_tool_ids": [
+      "alarm_set"
+    ],
+    "hard_negative_tool_ids": [
+      "timer_set",
+      "alarm_delete",
+      "alarm_list",
+      "time_query"
+    ]
+  },
+  {
+    "query": "地铁几号线能到天安门",
+    "positive_tool_ids": [
+      "navigation_subway"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_bus",
+      "navigation_flight",
+      "navigation_train"
+    ]
+  },
+  {
+    "query": "杭州明天适合出门吗",
+    "positive_tool_ids": [
+      "weather_query"
+    ],
+    "hard_negative_tool_ids": [
+      "weather_alert",
+      "weather_forecast"
+    ]
+  },
+  {
+    "query": "查看东京时间",
+    "positive_tool_ids": [
+      "time_query"
+    ],
+    "hard_negative_tool_ids": [
+      "alarm_list",
+      "timer_set",
+      "alarm_delete",
+      "alarm_set"
+    ]
+  },
+  {
+    "query": "创建明天上午10点的日程",
+    "positive_tool_ids": [
+      "calendar_create"
+    ],
+    "hard_negative_tool_ids": [
+      "calendar_query",
+      "reminder_set",
+      "calendar_delete"
+    ]
+  },
+  {
+    "query": "地铁怎么换乘",
+    "positive_tool_ids": [
+      "navigation_subway"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_bus",
+      "navigation_route"
+    ]
+  },
+  {
+    "query": "当前北京时间",
+    "positive_tool_ids": [
+      "time_query"
+    ],
+    "hard_negative_tool_ids": [
+      "alarm_list",
+      "timer_set",
+      "alarm_delete",
+      "alarm_set"
+    ]
+  },
+  {
+    "query": "今天四环路况如何",
+    "positive_tool_ids": [
+      "navigation_weather_road"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_nearby",
+      "navigation_eta",
+      "navigation_start",
+      "navigation_route"
+    ]
+  },
+  {
+    "query": "帮我拨个电话",
+    "positive_tool_ids": [
+      "phone_call"
+    ],
+    "hard_negative_tool_ids": [
+      "contact_add",
+      "sms_read",
+      "contact_query",
+      "sms_send"
+    ]
+  },
+  {
+    "query": "帮我查查这个单词什么意思",
+    "positive_tool_ids": [
+      "web_search"
+    ],
+    "hard_negative_tool_ids": [
+      "web_news",
+      "web_exchange",
+      "web_stock"
+    ]
+  },
+  {
+    "query": "锁定屏幕旋转",
+    "positive_tool_ids": [
+      "system_rotation"
+    ],
+    "hard_negative_tool_ids": [
+      "system_camera",
+      "system_nfc",
+      "system_wifi",
+      "system_screenshot"
+    ]
+  },
+  {
+    "query": "查看最近的通话",
+    "positive_tool_ids": [
+      "phone_call_log"
+    ],
+    "hard_negative_tool_ids": [
+      "sms_read",
+      "contact_query"
+    ]
+  },
+  {
+    "query": "教我做宫保鸡丁",
+    "positive_tool_ids": [
+      "web_recipe"
+    ],
+    "hard_negative_tool_ids": [
+      "web_encyclopedia",
+      "web_movie",
+      "web_music",
+      "web_translate"
+    ]
+  },
+  {
+    "query": "帮我打开前置摄像头",
+    "positive_tool_ids": [
+      "system_camera"
+    ],
+    "hard_negative_tool_ids": [
+      "system_screenshot",
+      "system_volume",
+      "system_dnd",
+      "system_nfc"
+    ]
+  },
+  {
+    "query": "删除明早的闹钟",
+    "positive_tool_ids": [
+      "alarm_delete"
+    ],
+    "hard_negative_tool_ids": [
+      "timer_set",
+      "alarm_set",
+      "time_query",
+      "alarm_list"
+    ]
+  },
+  {
+    "query": "帮我看看这周的天气趋势",
+    "positive_tool_ids": [
+      "weather_forecast"
+    ],
+    "hard_negative_tool_ids": [
+      "weather_alert",
+      "weather_query"
+    ]
+  },
+  {
+    "query": "查一下地铁路线",
+    "positive_tool_ids": [
+      "navigation_subway"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_bus",
+      "navigation_flight",
+      "navigation_train"
+    ]
+  },
+  {
+    "query": "关闭免打扰",
+    "positive_tool_ids": [
+      "system_dnd"
+    ],
+    "hard_negative_tool_ids": [
+      "system_bluetooth",
+      "system_flashlight",
+      "system_nfc",
+      "system_brightness"
+    ]
+  },
+  {
+    "query": "什么是量子力学",
+    "positive_tool_ids": [
+      "web_encyclopedia"
+    ],
+    "hard_negative_tool_ids": [
+      "web_search",
+      "knowledge_qa"
+    ]
+  },
+  {
+    "query": "买一张去南京的高铁票",
+    "positive_tool_ids": [
+      "navigation_train"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_flight",
+      "navigation_bus",
+      "navigation_subway"
+    ]
+  },
+  {
+    "query": "搜索一下减肥方法",
+    "positive_tool_ids": [
+      "web_search"
+    ],
+    "hard_negative_tool_ids": [
+      "web_encyclopedia",
+      "web_recipe"
+    ]
+  },
+  {
+    "query": "附近有没有超市",
+    "positive_tool_ids": [
+      "navigation_nearby"
+    ],
+    "hard_negative_tool_ids": [
+      "navigation_parking",
+      "navigation_route",
+      "navigation_eta",
+      "navigation_start"
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+=== Basic Info ===
+Total: 1014
+Keys format: OK
+Instruction consistent: OK
+Labels valid: OK
+Empty inputs: 0
+
+=== Label Distribution ===
+  chitchat: 190 (18.7%)
+  knowledge_qa: 176 (17.4%)
+  navigation: 176 (17.4%)
+  system_op: 146 (14.4%)
+  tool_call: 155 (15.3%)
+  web_search: 171 (16.9%)
+
+=== Data Quality ===
+Duplicate inputs: 24
+Avg input length: 10.7 chars
+Min: 2 / Max: 30
+Duplicate examples: [('最近有什么好看的电影上映', 3), ('水为什么会结冰', 2), ('为什么天空是蓝色的', 2), ('打开手电筒', 2), ('导航到最近的加油站', 2)]
+
+=== dev.json: 126 ===
+  chitchat: 20
+  knowledge_qa: 20
+  navigation: 29
+  system_op: 14
+  tool_call: 23
+  web_search: 20
+
+=== test.json: 128 ===
+  chitchat: 21
+  knowledge_qa: 27
+  navigation: 16
+  system_op: 19
+  tool_call: 24
+  web_search: 21
+
+=== Data Leakage Check ===
+Train-Dev overlap: 4
+Train-Test overlap: 5
+Dev-Test overlap: 1

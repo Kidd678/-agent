@@ -1,0 +1,694 @@
+{
+  "tools": [
+    {
+      "id": "weather_query",
+      "name": "查询天气",
+      "description": "查询指定城市在指定日期的天气情况，包括温度、湿度、风速、天气状况",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {"type": "string", "description": "城市名称"},
+          "date": {"type": "string", "description": "日期，格式 YYYY-MM-DD，默认今天"}
+        },
+        "required": ["city"]
+      },
+      "examples": ["明天北京天气怎么样", "上海今天下雨吗", "查一下深圳周末天气"]
+    },
+    {
+      "id": "weather_forecast",
+      "name": "天气预报",
+      "description": "查询未来7天的天气预报，包括每日温度范围和天气状况",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {"type": "string", "description": "城市名称"},
+          "days": {"type": "integer", "description": "预报天数，默认7天", "default": 7}
+        },
+        "required": ["city"]
+      },
+      "examples": ["北京未来一周天气", "查看上海7天预报"]
+    },
+    {
+      "id": "weather_alert",
+      "name": "天气预警",
+      "description": "查询指定城市当前的天气预警信息，如暴雨、高温、台风等",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {"type": "string", "description": "城市名称"}
+        },
+        "required": ["city"]
+      },
+      "examples": ["今天有暴雨预警吗", "查看台风预警"]
+    },
+    {
+      "id": "alarm_set",
+      "name": "设置闹钟",
+      "description": "设置一个闹钟，支持设置时间、重复周期和标签",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "time": {"type": "string", "description": "闹钟时间，格式 HH:MM"},
+          "label": {"type": "string", "description": "闹钟标签"},
+          "repeat": {"type": "string", "description": "重复周期：once/daily/weekdays/weekends", "default": "once"}
+        },
+        "required": ["time"]
+      },
+      "examples": ["设置明早7点闹钟", "每天8点叫我起床", "设个下午3点的闹钟"]
+    },
+    {
+      "id": "alarm_delete",
+      "name": "删除闹钟",
+      "description": "删除指定的闹钟",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "alarm_id": {"type": "string", "description": "闹钟ID"},
+          "label": {"type": "string", "description": "闹钟标签，用于模糊匹配"}
+        },
+        "required": []
+      },
+      "examples": ["删除明早的闹钟", "取消7点的闹钟"]
+    },
+    {
+      "id": "alarm_list",
+      "name": "查看闹钟列表",
+      "description": "查看所有已设置的闹钟",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "examples": ["我设置了哪些闹钟", "查看所有闹钟"]
+    },
+    {
+      "id": "timer_set",
+      "name": "设置计时器",
+      "description": "设置一个倒计时计时器",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "duration": {"type": "integer", "description": "计时时长（秒）"},
+          "label": {"type": "string", "description": "计时器标签"}
+        },
+        "required": ["duration"]
+      },
+      "examples": ["计时5分钟", "设置10分钟倒计时", "帮我计时30秒"]
+    },
+    {
+      "id": "time_query",
+      "name": "查询时间",
+      "description": "查询当前时间或指定时区的时间",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "timezone": {"type": "string", "description": "时区，如 Asia/Shanghai，默认本地时区"}
+        },
+        "required": []
+      },
+      "examples": ["现在几点了", "纽约现在几点", "查看东京时间"]
+    },
+    {
+      "id": "calendar_create",
+      "name": "创建日程",
+      "description": "在日历中创建一个新的日程安排",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "title": {"type": "string", "description": "日程标题"},
+          "start_time": {"type": "string", "description": "开始时间，格式 YYYY-MM-DD HH:MM"},
+          "end_time": {"type": "string", "description": "结束时间"},
+          "location": {"type": "string", "description": "地点"},
+          "reminder": {"type": "integer", "description": "提前提醒分钟数", "default": 15}
+        },
+        "required": ["title", "start_time"]
+      },
+      "examples": ["下午3点开会", "创建明天上午10点的日程", "安排周五下午的会议"]
+    },
+    {
+      "id": "calendar_query",
+      "name": "查询日程",
+      "description": "查询指定日期的日程安排",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "date": {"type": "string", "description": "日期，格式 YYYY-MM-DD，默认今天"}
+        },
+        "required": []
+      },
+      "examples": ["今天有什么安排", "查看明天的日程", "这周有什么会议"]
+    },
+    {
+      "id": "calendar_delete",
+      "name": "删除日程",
+      "description": "删除指定的日程安排",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "event_id": {"type": "string", "description": "日程ID"},
+          "title": {"type": "string", "description": "日程标题，用于模糊匹配"}
+        },
+        "required": []
+      },
+      "examples": ["取消下午的会议", "删除明天的日程"]
+    },
+    {
+      "id": "reminder_set",
+      "name": "设置提醒",
+      "description": "设置一个提醒事项",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "content": {"type": "string", "description": "提醒内容"},
+          "time": {"type": "string", "description": "提醒时间"},
+          "repeat": {"type": "string", "description": "重复周期"}
+        },
+        "required": ["content", "time"]
+      },
+      "examples": ["提醒我下午交报告", "明天早上提醒我带伞", "设置每周一的例会提醒"]
+    },
+    {
+      "id": "phone_call",
+      "name": "拨打电话",
+      "description": "拨打指定联系人或号码的电话",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "contact": {"type": "string", "description": "联系人姓名或电话号码"}
+        },
+        "required": ["contact"]
+      },
+      "examples": ["打电话给妈妈", "拨打13800138000", "给张三打电话"]
+    },
+    {
+      "id": "phone_call_log",
+      "name": "查看通话记录",
+      "description": "查看最近的通话记录",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "limit": {"type": "integer", "description": "返回记录数量", "default": 10}
+        },
+        "required": []
+      },
+      "examples": ["查看最近通话", "今天谁给我打过电话"]
+    },
+    {
+      "id": "sms_send",
+      "name": "发送短信",
+      "description": "发送短信给指定联系人",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "contact": {"type": "string", "description": "联系人姓名或电话号码"},
+          "content": {"type": "string", "description": "短信内容"}
+        },
+        "required": ["contact", "content"]
+      },
+      "examples": ["给张三发短信说我晚点到", "发短信给妈妈说今晚不回家吃饭"]
+    },
+    {
+      "id": "sms_read",
+      "name": "查看短信",
+      "description": "查看收到的短信",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "contact": {"type": "string", "description": "指定联系人的短信"},
+          "limit": {"type": "integer", "description": "返回数量", "default": 10}
+        },
+        "required": []
+      },
+      "examples": ["查看最近短信", "有没有张三发的短信"]
+    },
+    {
+      "id": "contact_query",
+      "name": "查询联系人",
+      "description": "查询联系人信息",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string", "description": "联系人姓名"}
+        },
+        "required": ["name"]
+      },
+      "examples": ["查一下张三的电话", "找一下李四的联系方式"]
+    },
+    {
+      "id": "contact_add",
+      "name": "添加联系人",
+      "description": "添加新的联系人",
+      "category": "tool_call",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string", "description": "联系人姓名"},
+          "phone": {"type": "string", "description": "电话号码"},
+          "email": {"type": "string", "description": "邮箱"}
+        },
+        "required": ["name", "phone"]
+      },
+      "examples": ["保存这个号码13800138000为张三", "添加新联系人"]
+    },
+    {
+      "id": "navigation_start",
+      "name": "开始导航",
+      "description": "开始导航到指定目的地",
+      "category": "navigation",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "destination": {"type": "string", "description": "目的地"},
+          "mode": {"type": "string", "description": "出行方式：driving/walking/transit", "default": "driving"}
+        },
+        "required": ["destination"]
+      },
+      "examples": ["导航去北京南站", "怎么去故宫", "步行导航到最近的地铁站"]
+    },
+    {
+      "id": "navigation_nearby",
+      "name": "搜索附近",
+      "description": "搜索附近的兴趣点，如餐厅、加油站、停车场等",
+      "category": "navigation",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "keyword": {"type": "string", "description": "搜索关键词"},
+          "radius": {"type": "integer", "description": "搜索半径（米）", "default": 1000}
+        },
+        "required": ["keyword"]
+      },
+      "examples": ["附近有加油站吗", "找一下附近的餐厅", "最近的停车场在哪"]
+    },
+    {
+      "id": "navigation_route",
+      "name": "路线规划",
+      "description": "规划从起点到终点的路线",
+      "category": "navigation",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "origin": {"type": "string", "description": "起点，默认当前位置"},
+          "destination": {"type": "string", "description": "终点"},
+          "mode": {"type": "string", "description": "出行方式", "default": "driving"}
+        },
+        "required": ["destination"]
+      },
+      "examples": ["从公司到机场怎么走", "规划一下去上海的路线"]
+    },
+    {
+      "id": "navigation_eta",
+      "name": "预计到达时间",
+      "description": "查询到目的地的预计到达时间和路况",
+      "category": "navigation",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "destination": {"type": "string", "description": "目的地"}
+        },
+        "required": ["destination"]
+      },
+      "examples": ["到机场要多久", "现在出发去公司几点能到"]
+    },
+    {
+      "id": "navigation_parking",
+      "name": "查找停车场",
+      "description": "查找附近的停车场及空位信息",
+      "category": "navigation",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "near": {"type": "string", "description": "指定地点附近的停车场"}
+        },
+        "required": []
+      },
+      "examples": ["附近哪里可以停车", "找一下商场的停车场"]
+    },
+    {
+      "id": "navigation_weather_road",
+      "name": "路况查询",
+      "description": "查询指定路段的实时路况",
+      "category": "navigation",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "road": {"type": "string", "description": "道路名称"},
+          "direction": {"type": "string", "description": "方向"}
+        },
+        "required": ["road"]
+      },
+      "examples": ["三环堵车吗", "京藏高速路况怎么样"]
+    },
+    {
+      "id": "navigation_bus",
+      "name": "公交查询",
+      "description": "查询公交线路和到站信息",
+      "category": "navigation",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "line": {"type": "string", "description": "公交线路"},
+          "station": {"type": "string", "description": "站点名称"}
+        },
+        "required": []
+      },
+      "examples": ["300路公交什么时候到", "查一下地铁2号线"]
+    },
+    {
+      "id": "navigation_subway",
+      "name": "地铁查询",
+      "description": "查询地铁路线和换乘信息",
+      "category": "navigation",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "from": {"type": "string", "description": "起点站"},
+          "to": {"type": "string", "description": "终点站"}
+        },
+        "required": ["from", "to"]
+      },
+      "examples": ["从西直门到国贸怎么换乘", "查一下地铁路线"]
+    },
+    {
+      "id": "navigation_flight",
+      "name": "航班查询",
+      "description": "查询航班信息",
+      "category": "navigation",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "flight_no": {"type": "string", "description": "航班号"},
+          "date": {"type": "string", "description": "日期"}
+        },
+        "required": []
+      },
+      "examples": ["查一下CA1234航班", "今天有去上海的航班吗"]
+    },
+    {
+      "id": "navigation_train",
+      "name": "火车查询",
+      "description": "查询火车票信息",
+      "category": "navigation",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "from": {"type": "string", "description": "出发站"},
+          "to": {"type": "string", "description": "到达站"},
+          "date": {"type": "string", "description": "日期"}
+        },
+        "required": ["from", "to"]
+      },
+      "examples": ["查一下明天去上海的高铁", "北京到广州的火车票"]
+    },
+    {
+      "id": "system_wifi",
+      "name": "WiFi设置",
+      "description": "打开或关闭WiFi",
+      "category": "system_op",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "description": "操作：on/off/toggle"}
+        },
+        "required": ["action"]
+      },
+      "examples": ["打开WiFi", "关闭无线网络", "连一下WiFi"]
+    },
+    {
+      "id": "system_bluetooth",
+      "name": "蓝牙设置",
+      "description": "打开或关闭蓝牙",
+      "category": "system_op",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "description": "操作：on/off/toggle"}
+        },
+        "required": ["action"]
+      },
+      "examples": ["打开蓝牙", "关闭蓝牙"]
+    },
+    {
+      "id": "system_brightness",
+      "name": "屏幕亮度",
+      "description": "调整屏幕亮度",
+      "category": "system_op",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "level": {"type": "integer", "description": "亮度等级 0-100"},
+          "auto": {"type": "boolean", "description": "是否自动调节"}
+        },
+        "required": []
+      },
+      "examples": ["调高亮度", "把亮度调到50%", "开启自动亮度"]
+    },
+    {
+      "id": "system_volume",
+      "name": "音量控制",
+      "description": "调整系统音量",
+      "category": "system_op",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "level": {"type": "integer", "description": "音量等级 0-100"},
+          "type": {"type": "string", "description": "音量类型：media/ring/alarm"}
+        },
+        "required": []
+      },
+      "examples": ["调高音量", "把铃声调小一点", "静音"]
+    },
+    {
+      "id": "system_flashlight",
+      "name": "手电筒",
+      "description": "打开或关闭手电筒",
+      "category": "system_op",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "description": "操作：on/off/toggle"}
+        },
+        "required": ["action"]
+      },
+      "examples": ["打开手电筒", "关闭闪光灯"]
+    },
+    {
+      "id": "system_camera",
+      "name": "打开相机",
+      "description": "打开相机应用",
+      "category": "system_op",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "mode": {"type": "string", "description": "拍照模式：photo/video/selfie"}
+        },
+        "required": []
+      },
+      "examples": ["打开相机", "我要拍照", "录个视频"]
+    },
+    {
+      "id": "system_screenshot",
+      "name": "截屏",
+      "description": "截取当前屏幕",
+      "category": "system_op",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "examples": ["截屏", "截图"]
+    },
+    {
+      "id": "system_dnd",
+      "name": "勿扰模式",
+      "description": "开启或关闭勿扰模式",
+      "category": "system_op",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "description": "操作：on/off"},
+          "duration": {"type": "integer", "description": "持续时间（分钟）"}
+        },
+        "required": ["action"]
+      },
+      "examples": ["开启勿扰模式", "关闭免打扰"]
+    },
+    {
+      "id": "system_nfc",
+      "name": "NFC设置",
+      "description": "打开或关闭NFC",
+      "category": "system_op",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "description": "操作：on/off"}
+        },
+        "required": ["action"]
+      },
+      "examples": ["打开NFC", "关闭NFC"]
+    },
+    {
+      "id": "system_rotation",
+      "name": "屏幕旋转",
+      "description": "开启或关闭自动旋转",
+      "category": "system_op",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {"type": "string", "description": "操作：on/off"}
+        },
+        "required": ["action"]
+      },
+      "examples": ["锁定屏幕旋转", "开启自动旋转"]
+    },
+    {
+      "id": "web_search",
+      "name": "网络搜索",
+      "description": "在互联网上搜索信息",
+      "category": "web_search",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {"type": "string", "description": "搜索关键词"}
+        },
+        "required": ["query"]
+      },
+      "examples": ["搜索一下最新的iPhone价格", "帮我查一下特斯拉股票", "搜一下怎么做红烧肉"]
+    },
+    {
+      "id": "web_news",
+      "name": "新闻资讯",
+      "description": "获取最新的新闻资讯",
+      "category": "web_search",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {"type": "string", "description": "新闻类别：tech/sports/entertainment/general"},
+          "limit": {"type": "integer", "description": "返回数量", "default": 5}
+        },
+        "required": []
+      },
+      "examples": ["今天有什么新闻", "查看科技新闻", "体育新闻"]
+    },
+    {
+      "id": "web_stock",
+      "name": "股票查询",
+      "description": "查询股票价格和走势",
+      "category": "web_search",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "symbol": {"type": "string", "description": "股票代码或名称"}
+        },
+        "required": ["symbol"]
+      },
+      "examples": ["查一下茅台股价", "苹果股票多少钱"]
+    },
+    {
+      "id": "web_exchange",
+      "name": "汇率查询",
+      "description": "查询货币汇率",
+      "category": "web_search",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "from": {"type": "string", "description": "源货币"},
+          "to": {"type": "string", "description": "目标货币"},
+          "amount": {"type": "number", "description": "金额", "default": 1}
+        },
+        "required": ["from", "to"]
+      },
+      "examples": ["美元兑人民币汇率", "100欧元换多少日元"]
+    },
+    {
+      "id": "web_translate",
+      "name": "翻译",
+      "description": "翻译文本",
+      "category": "web_search",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {"type": "string", "description": "要翻译的文本"},
+          "from": {"type": "string", "description": "源语言", "default": "auto"},
+          "to": {"type": "string", "description": "目标语言"}
+        },
+        "required": ["text", "to"]
+      },
+      "examples": ["把这句话翻译成英文", "翻译'你好'成日语"]
+    },
+    {
+      "id": "web_encyclopedia",
+      "name": "百科查询",
+      "description": "查询百科知识",
+      "category": "web_search",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {"type": "string", "description": "查询内容"}
+        },
+        "required": ["query"]
+      },
+      "examples": ["什么是量子计算", "黑洞是什么", "介绍一下人工智能"]
+    },
+    {
+      "id": "web_recipe",
+      "name": "菜谱查询",
+      "description": "查询菜品做法",
+      "category": "web_search",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "dish": {"type": "string", "description": "菜名"}
+        },
+        "required": ["dish"]
+      },
+      "examples": ["红烧肉怎么做", "教我做宫保鸡丁"]
+    },
+    {
+      "id": "web_movie",
+      "name": "电影查询",
+      "description": "查询电影信息和评分",
+      "category": "web_search",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {"type": "string", "description": "电影名称或类型"}
+        },
+        "required": ["query"]
+      },
+      "examples": ["最近有什么好看的电影", "流浪地球评分多少"]
+    },
+    {
+      "id": "web_music",
+      "name": "音乐播放",
+      "description": "播放音乐或查询歌曲信息",
+      "category": "web_search",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {"type": "string", "description": "歌曲名或歌手"},
+          "action": {"type": "string", "description": "操作：play/search", "default": "play"}
+        },
+        "required": ["query"]
+      },
+      "examples": ["播放周杰伦的歌", "来一首轻音乐"]
+    }
+  ]
+}

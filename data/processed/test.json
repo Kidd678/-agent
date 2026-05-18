@@ -1,0 +1,642 @@
+[
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "你好啊，今天怎么样？",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "最近有没有什么重大事件",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "太阳系外有没有适合人住的星球",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "最近有什么热门新闻吗",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "查一下步行到图书馆的路线",
+    "output": "navigation"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "调出我的最近通话列表",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "中国的首都是哪里",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "周末去怀柔走哪条路比较顺",
+    "output": "navigation"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "有没有推荐的好歌？",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "步行到附近的地铁站怎么走",
+    "output": "navigation"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "帮我查查最近的天气怎么样",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "音量调到百分之五十。",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "打开省电模式",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "明天需要带伞吗",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "今天有什么新闻吗",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "第一只克隆羊叫什么名字",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "人类是怎么进化来的？",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "查查上海现在的天气如何",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "查一下快递到哪了",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "想知道现在是几点几分",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "我现在的位置到最近的加油站怎么走？",
+    "output": "navigation"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "步行到王府井怎么走？",
+    "output": "navigation"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "区块链技术到底有啥用？",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "帮我设个七点的闹钟",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "帮我打开移动数据",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "手机别震了，调成静音吧",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "怎么做番茄炒蛋家常做法",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "最近压力有点大，想倾诉一下。",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "请规划一下从家到公司的公交路线",
+    "output": "navigation"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "明天天气怎么样",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "你真的是人工智能吗？",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "网上都在聊什么话题呢",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "我今天心情特别好，想跟你分享一下。",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "我老是好奇，天空本来就是蓝色的吗",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "附近哪里有好吃的早餐店？",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "手机震得太烦，帮我关掉",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "现在出发去机场会不会堵车？",
+    "output": "navigation"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "帮我查一下人体有多少块骨头",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "周末一般都怎么打发时间啊？",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "我要去三里屯太古里",
+    "output": "navigation"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "长江到底有多长",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "明早七点叫我起床",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "你平时有什么兴趣爱好啊？",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "今天的热搜新闻有哪些？",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "要不要一起聊聊天？",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "识别一下这是什么花",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "基因编辑是什么意思，容易理解吗",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "查找附近的停车场",
+    "output": "navigation"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "有没有空陪我聊会儿天",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "人工智能是怎么工作的能讲讲吗",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "步行到最近的星巴克怎么走",
+    "output": "navigation"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "最近在忙啥呢",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "静音模式启动。",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "找一下最新的电影推荐",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "我想了解人工智能的基本概念",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "今天有啥值得关注的消息不",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "公交站离我多远",
+    "output": "navigation"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "金字塔是怎么建造的你知道吗",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "设一个6点的闹钟，我要早起。",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "我挺喜欢你的，你觉得我们适合做朋友吗？",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "人为什么会做梦，有什么科学解释吗？",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "打开移动数据",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "麻烦把手机的数据关上",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "人工智能是怎么定义的",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "切换成深色模式",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "查一下最新的科技新闻。",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "深度学习和普通学习有啥不同",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "5G网络比4G快多少",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "查一下今天下午的天气如何？",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "删除今天下午的日程",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "弄个闹钟，20分钟后响",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "有啥好玩的本领不？",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "请告诉我大数据具体指的是什么",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "查一下新冠症状",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "给妈妈打个电话。",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "为什么天空是蓝色的",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "提醒我下午两点开会。",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "屏幕太亮，降低亮度",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "来，露两手看看？",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "帮我查下京港澳高速堵不堵",
+    "output": "navigation"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "帮我开个计时器，半小时那种",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "请开启省电模式。",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "翻译一下“你好”用英语怎么说",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "开车带我去最近的医院",
+    "output": "navigation"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "iPhone 15现在多少钱能买到？",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "周杰伦的新歌叫什么",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "你好啊，最近过得怎么样？",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "开启省电模式",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "可以调低媒体音量吗",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "帮我开启勿扰模式，到晚上八点。",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "晚上帮我调暗一点。",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "早上几点了",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "最近有啥新鲜事吗",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "设置个闹钟，下午三点提醒我。",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "为什么下雨后会出现彩虹",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "全球变暖的原因是什么？",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "最近过得怎么样？",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "设置一个早上七点的闹钟",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "能用大白话解释下量子计算不",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "长城具体有多长啊",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "创建一个周五下午的日程",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "早上好，新的一天开始了。",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "今天有什么值得关注的热点事件",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "最近比特币涨了还是跌了",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "WiFi的原理是什么",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "能简单说说量子计算是啥吗",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "iPhone 16 Pro现在卖多少钱",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "长城是怎么建造的",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "开车从杭州到苏州怎么走最快",
+    "output": "navigation"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "我好累啊",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "量子计算为什么厉害",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "询问一下去公园的路线，最好避开拥堵。",
+    "output": "navigation"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "时间过得真快啊！",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "帮我科普一下区块链是干嘛的",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "今天下午三点有个会议，帮我设个闹钟提醒。",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "关闭蓝牙",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "打开相机",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "量子计算发展到哪一步了",
+    "output": "web_search"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "屏幕亮度调到最高。",
+    "output": "system_op"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "看看张伟的手机号是多少",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "如果不堵车，开车去郊区景点要多久",
+    "output": "navigation"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "播放一些轻松的音乐。",
+    "output": "tool_call"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "相对论是在讲什么内容？",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "DNA有什么作用",
+    "output": "knowledge_qa"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "你好呀，今天过得怎么样？",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "你好呀，最近好吗？",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "你有名字吗",
+    "output": "chitchat"
+  },
+  {
+    "instruction": "判断以下用户输入的意图类别，只输出类别名称。\n类别：tool_call / knowledge_qa / chitchat / system_op / web_search / navigation",
+    "input": "看看明天是不是晴天",
+    "output": "tool_call"
+  }
+]

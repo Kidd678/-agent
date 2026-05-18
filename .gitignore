@@ -1,0 +1,38 @@
+# 本地配置和密钥
+.env
+.env.*
+!.env.example
+
+# LoRA 模型文件
+lora/
+
+# IDE / 编辑器配置
+.vscode/
+.idea/
+
+# Claude Code 配置
+.claude/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# 虚拟环境
+venv/
+.venv/
+env/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# Jupyter 检查点
+.ipynb_checkpoints/
+
+# 日志
+*.log
